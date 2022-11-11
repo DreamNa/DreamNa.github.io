@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+ 
+  <title>页面元素的内部文字内容的动态诞生</title>
+  <style type="text/css">
+  div{
+  width:200px;
+  background-color:rgba(10,96,100,0.5);
+  border:1px solid rgb(20,200,100);
+  border-radius:35%;
+  display:inline-block;
+  margin:10px;
+  color:white;
+  text-align:center;
+  padding:20px;
+  position:absolute;
+
+  }
+  </style>
+
+   </head>
+   <body>
+  <script type="text/javascript">
+<!--
+var s='  道由白云尽，春与青溪长。时有落花至，远随流水香。闲门向山路，深柳读书堂。幽映每白日，清辉照衣裳。';
+  for(var i=0;i<100;i++) {
+  var divDom=document.createElement('div');
+     divDom.textContent=s;
+        randPositionDiv(divDom);
+  document.body.appendChild(divDom);
+
+  }//End of for Loop
+
+
+  function randPositionDiv(dom){
+   var x=Math.floor(Math.random()*520);
+   var y=Math.floor(Math.random()*500);
+   dom.style.left=x+'px';
+   dom.style.top=y+'px';
+  }
+  //-->
+  </script>
+ </body>
+</html>
