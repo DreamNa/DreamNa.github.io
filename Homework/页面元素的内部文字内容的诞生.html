@@ -16,7 +16,7 @@
   text-align:center;
   padding:20px;
   position:absolute;
-
+transition:all 1.5s;
   }
   </style>
 
@@ -28,10 +28,16 @@ var s='  道由白云尽，春与青溪长。时有落花至，远随流水香�
   for(var i=0;i<100;i++) {
   var divDom=document.createElement('div');
      divDom.textContent=s;
+  divDom.onmouseover=function(){
+  var x=Math.floor(Math.random()*window.innerWidth);
+        var y=Math.floor(Math.random()*window.innerHeight);
+        this.style.left=x+'px';
+        this.style.top=y+'px';
+  }
         randPositionDiv(divDom);
   document.body.appendChild(divDom);
 
-  }//End of for Loop
+  }
 
 
   function randPositionDiv(dom){
