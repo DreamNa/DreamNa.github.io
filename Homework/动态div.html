@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+ <title>页面元素的内部文字内容的动态诞生</title>
+  <style type="text/css">
+  body{
+  	  background:url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202005%2F01%2F20200501144528_jvotd.thumb.400_0.gif&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1673760095&t=54120e4ebd59d5ae78c188d62c9d290a') no-repeat fixed center 0px;
+	  background-size:cover;
+	  background-position:center 0;
+	  position:relative;
+		     }  
+  div{
+  width:100px;
+  height:100px;
+  background:url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fp1.itc.cn%2Fq_70%2Fimages03%2F20200621%2F2d525175e0624053b09d27566ea7fb3c.jpeg&refer=http%3A%2F%2Fp1.itc.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1673754539&t=e5a12dcd78bbfe1160d302fb9eed7293');
+  background-color:rgba(10,96,100,0.5);
+  border:1px solid rgb(20,200,100);
+  border-radius:50%;
+  display:inline-block;
+  margin:1px;
+  font-family:隶书;
+  color:black;
+  text-align:center;
+  padding:30px;
+  position:absolute;
+transition:all 1.5s;
+  }
+  </style>
+
+   </head>
+   <body>
+  <script type="text/javascript">
+<!--
+var s='  绝代有佳人，幽居在空谷。自云良家子，零落依草木。';
+  for(var i=0;i<100;i++) {
+  var divDom=document.createElement('div');
+     divDom.textContent=s;
+  divDom.onmouseover=function(){
+  var x=Math.floor(Math.random()*window.innerWidth);
+        var y=Math.floor(Math.random()*window.innerHeight);
+        this.style.left=x+'px';
+        this.style.top=y+'px';
+  }
+        randPositionDiv(divDom);
+  document.body.appendChild(divDom);
+
+  }
+
+
+  function randPositionDiv(dom){
+   var x=Math.floor(Math.random()*520);
+   var y=Math.floor(Math.random()*500);
+   dom.style.left=x+'px';
+   dom.style.top=y+'px';
+  }
+  //-->
+  </script>
+ </body>
+</html>
