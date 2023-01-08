@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+ 
+   <title>动态DOM编程起点和基础</title>
+  <style type="text/css">
+  div{
+  width:100px;
+  height:100px;
+  background-color:green;
+  display:inline-block;
+  margin:20px;
+  color:white;
+  text-align:center;
+  padding:20px;
+  background-color:rgba(131,123,172,0.7);		  //背景颜色透明度
+  border-radius:50%;	  //边框圆角
+  position:absolute;	   //绝对定位
+ 
+  }
+  </style>
+
+   </head>
+   <body>
+  <script type="text/javascript">
+<!--
+
+  var s='  绝代有佳人，幽居在空谷。自云良家子，零落依草木。';
+  for(var i=0;i<100;i++) {
+  var divDom=document.createElement('div');
+     divDom.textContent=s;
+  divDom.onmouseover=function(){
+  var x=Math.floor(Math.random()*window.innerWidth);
+        var y=Math.floor(Math.random()*window.innerHeight);
+        this.style.left=x+'px';
+        this.style.top=y+'px';
+  }
+        randPositionDiv(divDom);
+  document.body.appendChild(divDom);
+
+  }
+
+
+  function randPositionDiv(dom){
+   var x=Math.floor(Math.random()*520);
+   var y=Math.floor(Math.random()*500);
+   dom.style.left=x+'px';
+   dom.style.top=y+'px';
+  }
+  //-->																												        //本程序实现全屏效果
+  </script>
+ </body>
+</html>
+
+   
